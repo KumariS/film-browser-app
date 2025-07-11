@@ -1,0 +1,51 @@
+.wishlist {
+    padding: 2rem;
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+  
+    &__grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+  
+    &__card {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      width: 200px;
+      text-align: center;
+      transition: transform 0.2s ease-in-out;
+  
+      &:hover {
+        transform: translateY(-4px);
+      }
+    }
+  
+    &__image {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+  
+    &__remove-button {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      background-color: #e74c3c;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #c0392b;
+      }
+    }
+  }
+  
