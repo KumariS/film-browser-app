@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react'        
-import FilmCard from '../components/FilmCard/FilmCard'        
-import { fetchFilmsByCategory } from '../api/tmdb'        
+import React, { useEffect, useState } from 'react'
+import FilmCard from '../components/FilmCard/FilmCard'
+import { fetchFilmsByCategory } from '../api/tmdb'
 
 const Home = () => {
-  const [popular, setPopular] = useState([])        
-  const [topRated, setTopRated] = useState([])        
-  const [upcoming, setUpcoming] = useState([])        
+  const [popular, setPopular] = useState([])
+  const [topRated, setTopRated] = useState([])
+  const [upcoming, setUpcoming] = useState([])
 
   useEffect(() => {
-    fetchFilmsByCategory('popular').then(setPopular)        
-    fetchFilmsByCategory('top_rated').then(setTopRated)        
-    fetchFilmsByCategory('upcoming').then(setUpcoming)        
-  }, [])        
+    fetchFilmsByCategory('popular').then(setPopular)
+    fetchFilmsByCategory('top_rated').then(setTopRated)
+    fetchFilmsByCategory('upcoming').then(setUpcoming)
+  }, [])
 
   const renderCarousel = (title, films, category) => (
     <div className="carousel">
@@ -28,7 +28,7 @@ const Home = () => {
         ))}
       </div>
     </div>
-  )        
+  )
 
   return (
     <div className="home">
@@ -36,7 +36,7 @@ const Home = () => {
       {renderCarousel('Top Rated Movies', topRated, 'top_rated')}
       {renderCarousel('Upcoming Movies', upcoming, 'upcoming')}
     </div>
-  )        
-}        
+  )
+}
 
 export default Home        

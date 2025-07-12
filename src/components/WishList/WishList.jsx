@@ -1,11 +1,11 @@
-import React from 'react'     
-import { useWishList } from '../../context/WishListContext'     
-import { getImageUrl } from '../../api/tmdb'     
+import React from 'react'
+import { useWishList } from '../../context/WishListContext'
+import { getImageUrl } from '../../api/tmdb'
 
 const WishList = () => {
-  const { wishList, removeFromWishList } = useWishList()     
+  const { wishList, removeFromWishList } = useWishList()
 
-  if (wishList.length === 0) return <div>Your wish list is empty.</div>     
+  if (wishList.length === 0) return <div>Your wish list is empty.</div>
 
   return (
     <div className="wishlist">
@@ -22,7 +22,7 @@ const WishList = () => {
         ))}
       </div>
     </div>
-  )     
-}     
+  )
+}
 
 export default WishList     

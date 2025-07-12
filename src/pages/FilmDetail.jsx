@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from 'react'       
-import { useParams } from 'react-router-dom'       
-import { fetchFilmById, getImageUrl } from '../api/tmdb'       
-import { useWishList } from '../context/WishListContext'       
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { fetchFilmById, getImageUrl } from '../api/tmdb'
+import { useWishList } from '../context/WishListContext'
 
 const categoryStyles = {
   popular: { fontFamily: 'Arial', buttonClass: 'btn-popular' },
   top_rated: { fontFamily: 'Georgia', buttonClass: 'btn-top-rated' },
   upcoming: { fontFamily: 'Courier New', buttonClass: 'btn-upcoming' },
-}       
+}
 
 const FilmDetail = () => {
-  const { id } = useParams()       
-  const [film, setFilm] = useState(null)       
-  const { addToWishList } = useWishList()       
+  const { id } = useParams()
+  const [film, setFilm] = useState(null)
+  const { addToWishList } = useWishList()
 
   useEffect(() => {
     if (id) {
-      fetchFilmById(Number(id)).then(setFilm).catch(console.error)       
+      fetchFilmById(Number(id)).then(setFilm).catch(console.error)
     }
-  }, [id])       
+  }, [id])
 
-  if (!film) return <div>Loading...</div>       
+  if (!film) return <div>Loading...</div>
 
-  const category = film.popularity > 80 ? 'popular' : film.vote_average > 7 ? 'top_rated' : 'upcoming'       
-  const styles = categoryStyles[category]       
+  const category = film.popularity > 80 ? 'popular' : film.vote_average > 7 ? 'top_rated' : 'upcoming'
+  const styles = categoryStyles[category]
 
   return (
     <div style={{ fontFamily: styles.fontFamily }} className="film-detail">
@@ -39,7 +39,7 @@ const FilmDetail = () => {
         Add to Wish List
       </button>
     </div>
-  )       
-}       
+  )
+}
 
 export default FilmDetail       

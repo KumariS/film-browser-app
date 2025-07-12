@@ -1,5 +1,5 @@
-import React from 'react'    
-import { Link } from 'react-router-dom'    
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
         <Link to="/wishlist" className="header__link">Wish List</Link>
       </nav>
     </header>
-  )    
-}    
+  )
+}
 
 export default Header    
