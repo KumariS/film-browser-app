@@ -36,7 +36,7 @@ A React web application to browse films by categories using The Movie Database (
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/film-browser-app.git
+git clone https://github.com/KumariS/film-browser-app.git
 cd film-browser-app
 
 ### 2.Install dependencies
@@ -46,6 +46,7 @@ npm install
 Create a .env file in the project root:
 VITE_TMDB_API_KEY=your_tmdb_api_key_here
 You can obtain your API key by creating an account at https://developer.themoviedb.org.
+This is the API Key link: https://www.themoviedb.org/settings/api
 
 ### 4. Run the app
 npm run dev
@@ -86,6 +87,10 @@ You can extend with unit tests using:
 Jest
 
 React Testing Library
+
+#### The screenshots of running movies browser web application UI is under the below folder:
+src/assets  
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
