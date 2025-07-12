@@ -89,7 +89,11 @@ Jest
 React Testing Library
 
 #### The screenshots of running movies browser web application UI is under the below folder:
-src/assets  
+src/assets/FilmDetailPage.png
+src/assets/HomePage.png  
+src/assets/WishListEmptyPage.png  
+src/assets/WishListPage.png  
+
 
 # React + Vite
 
