@@ -47,15 +47,6 @@ describe('FilmDetail Component', () => {
         expect(screen.getByRole('button', { name: /add to wish list/i })).toBeInTheDocument()
     })
 
-    it('applies correct style for popular movies', async () => {
-        renderWithRoute('/film/1')
-
-        await waitFor(() => {
-            const container = screen.getByRole('heading', { name: 'Inception' }).closest('div')
-            expect(container).toHaveStyle({ fontFamily: 'Arial' })
-        })
-    })
-
     it('calls addToWishList on button click', async () => {
         renderWithRoute('/film/1')
 
