@@ -54,25 +54,32 @@ Visit: http://localhost:5173
 
 # Folder Structure
 src/
-├── api/                  # TMDB API helper functions
+├── api/                         # API helper functions
 │   └── tmdb.js
-├── components/
+│
+├── components/                  # Reusable components
 │   ├── FilmCard/
 │   ├── Header/
 │   └── WishList/
-├── context/
+│
+├── context/                     # React context providers
 │   └── WishListContext.jsx
-├── pages/
+│
+├── pages/                       # Page-level components
 │   ├── Home.jsx
 │   └── FilmDetail.jsx
-├── styles/
+│
+├── styles/                      # Global and component styles
 │   ├── components/
 │   │   ├── _carousel.scss
 │   │   ├── _filmCard.scss
+│   │   ├── _filmDetail.scss      # FilmDetail page
 │   │   ├── _header.scss
 │   │   └── _wishlist.scss
-│   └── main.scss
-└── App.jsx
+│   └── main.scss                # Imports all partials
+│
+└── App.jsx                      # App root component
+
 
 ### Useful Links
 TMDB API Docs: https://developer.themoviedb.org/reference/intro
